@@ -72,6 +72,7 @@ namespace DeckOfCards
                 {
                     DealerHand.Add(Deck.RemoveTopCard());
                     DealersHandTotal = UpdateScore(DealerHand);
+                    CheckIfBust();
                 }
                 else
                 {
