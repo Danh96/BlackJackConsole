@@ -82,7 +82,7 @@ namespace DeckOfCards
             return card;
         }
 
-        public List<Card> GenerateDeck()
+        private List<Card> GenerateDeck()
         {
             List<Card> cards = new List<Card>();
 

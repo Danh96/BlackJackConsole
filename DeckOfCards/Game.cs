@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 
 namespace DeckOfCards
 {
     public class Game
     {
-        private PlayingCardDeck Deck = new PlayingCardDeck();
+        private PlayingCardDeck Deck;
         private List<Card> PlayersHand = new List<Card>();
         private List<Card> DealerHand = new List<Card>();
         private int DealersHandTotal;
@@ -38,7 +37,7 @@ namespace DeckOfCards
                 else
                 {
                     TypeToConsole.WriteLine($"\nYour match score is {PlayerGameScore} And my match score is {DealerGameScore}");
-                    TypeToConsole.WriteLine("\nLet the match continue, Next round! " + DealerEmoji.NextRoundFace);
+                    TypeToConsole.WriteLine("Let the match continue, Next round! " + DealerEmoji.NextRoundFace);
                     Console.Clear();
                 }
             }
@@ -103,13 +102,13 @@ namespace DeckOfCards
 
             if (PlayersHandTotal > DealersHandTotal)
             {
-                TypeToConsole.WriteLine($"No you won the game! you scored {PlayersHandFinalTotal}. I scored {DealersHandFinalTotal}. " + DealerEmoji.AngryFace);
+                TypeToConsole.WriteLine($"No you won the game! you scored {PlayersHandFinalTotal} and I scored {DealersHandFinalTotal}. " + DealerEmoji.AngryFace);
                 DealerGameScore--;
                 PlayerGameScore++;
             }
             else if (PlayersHandTotal < DealersHandTotal)
             {
-                TypeToConsole.WriteLine($"HAHA! you lost! you scored {PlayersHandFinalTotal}. I scored {DealersHandFinalTotal}. " + DealerEmoji.HappyFace);
+                TypeToConsole.WriteLine($"HAHA! you lost! you scored {PlayersHandFinalTotal} and I scored {DealersHandFinalTotal}. " + DealerEmoji.HappyFace);
                 DealerGameScore++;
                 PlayerGameScore--;
             }
@@ -172,7 +171,8 @@ namespace DeckOfCards
 
         private void NewGame()
         {
-            Deck.GenerateDeck();
+            Deck = new PlayingCardDeck();
+
             Deck.Shuffle();
 
             PlayersHandTotal = 0;
@@ -211,7 +211,7 @@ namespace DeckOfCards
                         break;
                     case ConsoleKey.D2:
                         GetPlayerNewCard();
-                        playersTurn = PlayersHandTotal < 21;
+                        playersTurn = PlayersHandTotal <= 21;
                         CheckIfBust();
                         break;
                     default:
