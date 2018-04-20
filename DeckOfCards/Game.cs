@@ -156,7 +156,7 @@ namespace DeckOfCards
 
             foreach (Card c in aces)
             {
-                if (total + 11 > 21)
+                if (handTotal + 11 > 21)
                 {
                     handTotal++;
                 }
