@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{8B5E873D-44DB-4A37-8F75-5F52C4F2C96E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DeckOfCards/Game.cs">
+    <Files>
+      <File FileName="DeckOfCards/Game.cs" Line="159" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.DeckOfCards PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
